@@ -2,7 +2,6 @@ package xlosvsm.testing;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import xlosvsm.database.Album;
@@ -13,6 +12,6 @@ class DatabaseTest {
 		Album album = new Album("Amnesiac", null, null, null, null);
 		String result = album.toString();
 		
-		Assertions.assertEquals("Album Name: Amnesiac", result);
+		assertEquals("Album Name: Amnesiac", result);
 	}
 }
