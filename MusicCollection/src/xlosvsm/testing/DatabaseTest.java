@@ -11,6 +11,10 @@ import xlosvsm.database.Album;
 import xlosvsm.database.Vinyl;
 
 class DatabaseTest {
+	// Cassette checks
+	// CD checks
+	// Vinyl checks
+	// Album checks
 	@Test
 	public void testAlbum1() {
 		Album album = new Album("Amnesiac", null, 2001, null, null, null, List.of(), null);
@@ -45,7 +49,7 @@ class DatabaseTest {
 	
 	@Test
 	public void testAlbum5() {
-		Album album = new Album("Nowhere", "Ride", LocalDate.of(2022, 11, 4), new Vinyl(), "Wichita", "WEBB572LP", List.of("Alternative Rock"), 2023);
+		Album album = new Album("Nowhere", "Ride", LocalDate.of(2022, 11, 4), new Vinyl(12, 33, 1, "Transparent Blue"), "Wichita", "WEBB572LP", List.of("Alternative Rock"), 2023);
 		String result = album.toString();
 
 		assertEquals("Album Name: Nowhere", result);
