@@ -1,5 +1,5 @@
 package xlosvsm.database;
 
-public record Single() {
+public record Single() implements Release {
 
 }

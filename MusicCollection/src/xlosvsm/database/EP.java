@@ -1,5 +1,5 @@
 package xlosvsm.database;
 
-public record EP() {
+public record EP() implements Release {
 
 }
