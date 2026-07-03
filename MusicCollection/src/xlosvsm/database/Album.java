@@ -16,20 +16,15 @@ import java.util.List;
  * @author Matthew McDermott
  */
 public record Album(String name, String artist, LocalDate releaseDate, Medium medium, String publisher, String id,
-		List<String> genres, LocalDate obtainedDate) {
+		List<String> genres) implements Release {
 	public Album(String name, String artist, LocalDate releaseDate, Medium medium, String publisher, String id,
-			String genre, LocalDate obtainedDate) {
-		this(name, artist, releaseDate, medium, publisher, id, List.of(genre), obtainedDate);
+			String genre) {
+		this(name, artist, releaseDate, medium, publisher, id, List.of(genre));
 	}
 
 	public Album(String name, String artist, Integer releaseYear, Medium medium, String publisher, String id,
-			List<String> genres, LocalDate obtainedDate) {
-		this(name, artist, LocalDate.of(releaseYear, 1, 1), medium, publisher, id, genres, obtainedDate);
-	}
-
-	public Album(String name, String artist, LocalDate releaseDate, Medium medium, String publisher, String id,
-			List<String> genres, Integer obtainedYear) {
-		this(name, artist, releaseDate, medium, publisher, id, genres, LocalDate.of(obtainedYear, 1, 1));
+			List<String> genres) {
+		this(name, artist, LocalDate.of(releaseYear, 1, 1), medium, publisher, id, genres);
 	}
 
 	@Override
