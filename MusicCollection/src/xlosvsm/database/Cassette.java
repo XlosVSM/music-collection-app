@@ -8,7 +8,9 @@ import java.util.Map;
  */
 public record Cassette(int amount) implements Medium {
 	public Cassette {
-		assert amount > 0;
+		if (amount <= 0) {
+			throw new IllegalArgumentException("Amount must be greater than 0.");
+		}
 	}
 
 	@Override
