@@ -27,15 +27,25 @@ class MediumTests {
 		assertThrows(IllegalArgumentException.class, () -> new CD(0));
 	}
 
-	// Vinyl checks
-	/**
-	 * Check that all IllegalArgumentExceptions are thrown
-	 */
+	// Vinyl checks //
+	// Illegal argument tests
 	@Test
-	public void vinylTest1() {
+	public void illegalVinylTest1() {
 		assertThrows(IllegalArgumentException.class, () -> new Vinyl(0, 33, 1));
+	}
+
+	@Test
+	public void illegalVinylTest2() {
 		assertThrows(IllegalArgumentException.class, () -> new Vinyl(12, 0, 1));
+	}
+
+	@Test
+	public void illegalVinylTest3() {
 		assertThrows(IllegalArgumentException.class, () -> new Vinyl(12, 33, 0));
+	}
+
+	@Test
+	public void illegalVinylTest4() {
 		assertThrows(IllegalArgumentException.class, () -> new Vinyl(0, 0, 0));
 	}
 }
