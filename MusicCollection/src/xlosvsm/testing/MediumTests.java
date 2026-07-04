@@ -48,4 +48,12 @@ class MediumTests {
 	public void illegalVinylTest4() {
 		assertThrows(IllegalArgumentException.class, () -> new Vinyl(0, 0, 0));
 	}
+
+	// toString() tests
+	@Test
+	public void vinylToStringTest1() {
+		Vinyl vinyl = new Vinyl(12, 33, 1);
+		
+		assertEquals("Black Vinyl (12\" @ 33RPM)", vinyl.toString());
+	}
 }

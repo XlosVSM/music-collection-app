@@ -44,4 +44,9 @@ public record Vinyl(int diameter, int RPM, String colour, int amount) implements
 	public void addTracklist(Map<String, Integer> tracklist) {
 		// TODO Auto-generated method stub
 	}
+
+	@Override
+	public String toString() {
+		return colour + " Vinyl (" + diameter + "\" @ " + RPM + "RPM)";
+	}
 }
