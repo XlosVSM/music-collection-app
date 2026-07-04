@@ -33,6 +33,9 @@ class MediumTests {
 	 */
 	@Test
 	public void vinylTest1() {
+		assertThrows(IllegalArgumentException.class, () -> new Vinyl(0, 33, 1));
+		assertThrows(IllegalArgumentException.class, () -> new Vinyl(12, 0, 1));
+		assertThrows(IllegalArgumentException.class, () -> new Vinyl(12, 33, 0));
 		assertThrows(IllegalArgumentException.class, () -> new Vinyl(0, 0, 0));
 	}
 }
