@@ -4,9 +4,9 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-import xlosvsm.database.CD;
-import xlosvsm.database.Cassette;
-import xlosvsm.database.Vinyl;
+import xlosvsm.database.mediums.CD;
+import xlosvsm.database.mediums.Cassette;
+import xlosvsm.database.mediums.Vinyl;
 
 class MediumTests {
 	// Cassette checks

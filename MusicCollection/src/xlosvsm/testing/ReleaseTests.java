@@ -7,8 +7,8 @@ import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
-import xlosvsm.database.Album;
-import xlosvsm.database.Vinyl;
+import xlosvsm.database.mediums.Vinyl;
+import xlosvsm.database.releases.Album;
 
 class ReleaseTests {
 	// Album checks

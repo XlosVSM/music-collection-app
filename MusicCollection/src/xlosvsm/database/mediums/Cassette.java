@@ -1,4 +1,4 @@
-package xlosvsm.database;
+package xlosvsm.database.mediums;
 
 import java.util.List;
 import java.util.Map;
@@ -6,8 +6,8 @@ import java.util.Map;
 /**
  * @author Matthew McDermott
  */
-public record CD(int amount) implements Medium {
-	public CD {
+public record Cassette(int amount) implements Medium {
+	public Cassette {
 		if (amount <= 0) {
 			throw new IllegalArgumentException("Amount must be greater than 0.");
 		}
@@ -21,6 +21,6 @@ public record CD(int amount) implements Medium {
 
 	@Override
 	public void addTracklist(Map<String, Integer> tracklist) {
-		// TODO Auto-generated method stub
+		// TODO Auto-generated method stub=
 	}
 }

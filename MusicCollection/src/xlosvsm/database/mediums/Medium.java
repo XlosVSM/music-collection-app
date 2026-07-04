@@ -1,4 +1,4 @@
-package xlosvsm.database;
+package xlosvsm.database.mediums;
 
 import java.util.List;
 import java.util.Map;
