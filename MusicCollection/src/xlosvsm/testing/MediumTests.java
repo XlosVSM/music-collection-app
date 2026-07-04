@@ -9,19 +9,15 @@ import xlosvsm.database.mediums.Cassette;
 import xlosvsm.database.mediums.Vinyl;
 
 class MediumTests {
-	// Cassette checks
-	/**
-	 * Check that all IllegalArgumentExceptions are thrown
-	 */
+	// Cassette checks //
+	// Illegal argument tests
 	@Test
 	public void cassetteTest1() {
 		assertThrows(IllegalArgumentException.class, () -> new Cassette(0));
 	}
 
-	// CD checks
-	/**
-	 * Check that all IllegalArgumentExceptions are thrown
-	 */
+	// CD checks //
+	// Illegal argument tests
 	@Test
 	public void cdTest1() {
 		assertThrows(IllegalArgumentException.class, () -> new CD(0));
