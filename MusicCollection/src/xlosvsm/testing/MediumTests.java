@@ -56,4 +56,25 @@ class MediumTests {
 		
 		assertEquals("Black Vinyl (12\" @ 33RPM)", vinyl.toString());
 	}
+	
+	@Test
+	public void vinylToStringTest2() {
+		Vinyl vinyl = new Vinyl(12, 45, 1);
+		
+		assertEquals("Black Vinyl (12\" @ 45RPM)", vinyl.toString());
+	}
+	
+	@Test
+	public void vinylToStringTest3() {
+		Vinyl vinyl = new Vinyl(12, 33, "Orange", 1);
+		
+		assertEquals("Orange Vinyl (12\" @ 33RPM)", vinyl.toString());
+	}
+	
+	@Test
+	public void vinylToStringTest4() {
+		Vinyl vinyl = new Vinyl(12, 33, 2);
+		
+		assertEquals("2 Black Vinyl (12\" @ 33RPM)", vinyl.toString());
+	}
 }

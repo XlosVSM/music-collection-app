@@ -47,6 +47,12 @@ public record Vinyl(int diameter, int RPM, String colour, int amount) implements
 
 	@Override
 	public String toString() {
-		return colour + " Vinyl (" + diameter + "\" @ " + RPM + "RPM)";
+		String start = "";
+		
+		if (amount != 1) {
+			start = amount + " ";
+		}
+		
+		return start + colour + " Vinyl (" + diameter + "\" @ " + RPM + "RPM)";
 	}
 }
