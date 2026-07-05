@@ -11,7 +11,11 @@ import xlosvsm.database.mediums.Vinyl;
 import xlosvsm.database.releases.Album;
 
 class ReleaseTests {
-	// Album checks
+	// Duration tests //
+
+	// Track tests //
+
+	// Album tests //
 	@Test
 	public void testAlbum1() {
 		Album album = new Album("Amnesiac", null, 2001, null, null, null, List.of(), List.of());
@@ -54,8 +58,7 @@ class ReleaseTests {
 		assertEquals("Album Name: Nowhere", result);
 	}
 
-	// EP checks
+	// EP tests //
 
-	// Single checks
-
+	// Single tests //
 }
