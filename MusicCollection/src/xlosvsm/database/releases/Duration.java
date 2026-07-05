@@ -15,11 +15,11 @@ public record Duration(int minutes, int seconds) {
 			throw new IllegalArgumentException("Seconds must be between 0 and 59.");
 		}
 	}
-	
+
 	public static Duration of(int minutes, int seconds) {
 		return new Duration(minutes, seconds);
 	}
-	
+
 	/**
 	 * 
 	 * @param durations
