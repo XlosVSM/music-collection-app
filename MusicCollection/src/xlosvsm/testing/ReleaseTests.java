@@ -7,8 +7,8 @@ import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
-import xlosvsm.database.Album;
-import xlosvsm.database.Vinyl;
+import xlosvsm.database.mediums.Vinyl;
+import xlosvsm.database.releases.Album;
 
 class ReleaseTests {
 	// Album checks
@@ -46,7 +46,7 @@ class ReleaseTests {
 
 	@Test
 	public void testAlbum5() {
-		Album album = new Album("Nowhere", "Ride", LocalDate.of(2022, 11, 4), new Vinyl(12, 33, 1, "Transparent Blue"),
+		Album album = new Album("Nowhere", "Ride", LocalDate.of(2022, 11, 4), new Vinyl(12, 33, "Transparent Blue", 1),
 				"Wichita", "WEBB572LP", List.of("Alternative Rock"));
 		String result = album.toString();
 

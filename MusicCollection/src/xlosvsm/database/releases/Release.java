@@ -1,7 +1,9 @@
-package xlosvsm.database;
+package xlosvsm.database.releases;
 
 import java.time.LocalDate;
 import java.util.List;
+
+import xlosvsm.database.mediums.Medium;
 
 /**
  * The {@code Release} represents any to be stored in the database, to cover Albums, EPs, and Singles.
