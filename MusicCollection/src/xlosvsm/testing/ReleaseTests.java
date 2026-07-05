@@ -14,7 +14,7 @@ class ReleaseTests {
 	// Album checks
 	@Test
 	public void testAlbum1() {
-		Album album = new Album("Amnesiac", null, 2001, null, null, null, List.of());
+		Album album = new Album("Amnesiac", null, 2001, null, null, null, List.of(), List.of());
 		String result = album.toString();
 
 		assertEquals("Album Name: Amnesiac", result);
@@ -22,7 +22,7 @@ class ReleaseTests {
 
 	@Test
 	public void testAlbum2() {
-		Album album = new Album("Amnesiac", "Radiohead", 2001, null, null, null, List.of());
+		Album album = new Album("Amnesiac", "Radiohead", 2001, null, null, null, List.of(), List.of());
 		String result = album.toString();
 
 		assertEquals("Album Name: Amnesiac", result);
@@ -30,7 +30,7 @@ class ReleaseTests {
 
 	@Test
 	public void testAlbum3() {
-		Album album = new Album("Amnesiac", "Radiohead", null, null, null, null, "Alternative Rock");
+		Album album = new Album("Amnesiac", "Radiohead", null, null, null, null, "Alternative Rock", List.of());
 		String result = album.toString();
 
 		assertEquals("Album Name: Amnesiac", result);
@@ -38,7 +38,8 @@ class ReleaseTests {
 
 	@Test
 	public void testAlbum4() {
-		Album album = new Album("Amnesiac", "Radiohead", 2001, null, null, null, List.of("Alternative Rock"));
+		Album album = new Album("Amnesiac", "Radiohead", 2001, null, null, null, List.of("Alternative Rock"),
+				List.of());
 		String result = album.toString();
 
 		assertEquals("Album Name: Amnesiac", result);
@@ -47,7 +48,7 @@ class ReleaseTests {
 	@Test
 	public void testAlbum5() {
 		Album album = new Album("Nowhere", "Ride", LocalDate.of(2022, 11, 4), new Vinyl(12, 33, "Transparent Blue", 1),
-				"Wichita", "WEBB572LP", List.of("Alternative Rock"));
+				"Wichita", "WEBB572LP", List.of("Alternative Rock"), List.of());
 		String result = album.toString();
 
 		assertEquals("Album Name: Nowhere", result);

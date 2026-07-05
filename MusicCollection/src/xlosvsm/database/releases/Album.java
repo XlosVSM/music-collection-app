@@ -6,15 +6,15 @@ import java.util.List;
 import xlosvsm.database.mediums.Medium;
 
 public record Album(String name, String artist, LocalDate releaseDate, Medium medium, String publisher, String id,
-		List<String> genres) implements Release {
+		List<String> genres, List<List<Track>> trackListings) implements Release {
 	public Album(String name, String artist, LocalDate releaseDate, Medium medium, String publisher, String id,
-			String genre) {
-		this(name, artist, releaseDate, medium, publisher, id, List.of(genre));
+			String genre, List<List<Track>> trackListings) {
+		this(name, artist, releaseDate, medium, publisher, id, List.of(genre), trackListings);
 	}
 
 	public Album(String name, String artist, Integer releaseYear, Medium medium, String publisher, String id,
-			List<String> genres) {
-		this(name, artist, LocalDate.of(releaseYear, 1, 1), medium, publisher, id, genres);
+			List<String> genres, List<List<Track>> trackListings) {
+		this(name, artist, LocalDate.of(releaseYear, 1, 1), medium, publisher, id, genres, trackListings);
 	}
 
 	@Override

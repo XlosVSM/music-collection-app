@@ -24,4 +24,6 @@ public interface Release {
 	String id();
 
 	List<String> genres();
+	
+	List<List<Track>> trackListings();
 }

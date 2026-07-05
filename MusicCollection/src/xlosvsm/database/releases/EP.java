@@ -6,6 +6,6 @@ import java.util.List;
 import xlosvsm.database.mediums.Medium;
 
 public record EP(String name, String artist, LocalDate releaseDate, Medium medium, String publisher, String id,
-		List<String> genres) implements Release {
+		List<String> genres, List<List<Track>> trackListings) implements Release {
 
 }
