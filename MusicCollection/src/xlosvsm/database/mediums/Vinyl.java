@@ -1,7 +1,6 @@
 package xlosvsm.database.mediums;
 
 import java.util.List;
-import java.util.Map;
 
 /**
  * @param diameter
@@ -34,19 +33,9 @@ public record Vinyl(int diameter, int RPM, String colour, int amount) implements
 		this(diametre, RPM, "Black", amount);
 	}
 
-	@Override
-	public List<List<String>> tracklist() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 	@Override
-	public void addTracklist(Map<String, Integer> tracklist) {
-		// TODO Auto-generated method stub
-	}
-
-	@Override
-	public String toString() {		
+	public String toString() {
 		return (amount != 1 ? amount + " " : "") + colour + " Vinyl (" + diameter + "\" @ " + RPM + "RPM)";
 	}
 }
