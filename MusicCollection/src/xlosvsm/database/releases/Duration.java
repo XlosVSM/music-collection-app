@@ -19,6 +19,26 @@ public record Duration(int minutes, int seconds) {
 	public static Duration of(int minutes, int seconds) {
 		return new Duration(minutes, seconds);
 	}
+	
+	/**
+	 * 
+	 * @param durations
+	 * @return
+	 * @author Matthew McDermott
+	 */
+	public static Duration sum(Duration... durations) {
+		int totalSeconds = 0;
+
+		for (Duration duration : durations) {
+			totalSeconds += duration.totalSeconds();
+		}
+
+		return Duration.of(totalSeconds / 60, totalSeconds % 60);
+	}
+
+	private int totalSeconds() {
+		return minutes * 60 + seconds;
+	}
 
 	@Override
 	public String toString() {
