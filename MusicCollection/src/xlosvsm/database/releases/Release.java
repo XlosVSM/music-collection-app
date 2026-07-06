@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 import xlosvsm.database.mediums.Medium;
+import xlosvsm.database.releases.track.Track;
 
 /**
  * The {@code Release} represents any to be stored in the database, to cover
