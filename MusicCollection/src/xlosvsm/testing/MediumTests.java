@@ -12,15 +12,31 @@ class MediumTests {
 	// Cassette checks //
 	// Illegal argument tests
 	@Test
-	public void cassetteTest1() {
+	public void illegalCassetteTest() {
 		assertThrows(IllegalArgumentException.class, () -> new Cassette(0));
+	}
+
+	// toString test
+	@Test
+	public void cassetteToStringTest() {
+		Cassette cassette = new Cassette(1);
+
+		assertEquals("Cassette", cassette.toString());
 	}
 
 	// CD checks //
 	// Illegal argument tests
 	@Test
-	public void cdTest1() {
+	public void illegalCDTest() {
 		assertThrows(IllegalArgumentException.class, () -> new CD(0));
+	}
+
+	// toString test
+	@Test
+	public void cdToStringTest() {
+		CD cd = new CD(1);
+
+		assertEquals("CD", cd.toString());
 	}
 
 	// Vinyl checks //
