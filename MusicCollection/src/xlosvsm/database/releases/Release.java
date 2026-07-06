@@ -6,8 +6,17 @@ import java.util.List;
 import xlosvsm.database.mediums.Medium;
 
 /**
- * The {@code Release} represents any to be stored in the database, to cover Albums, EPs, and Singles.
+ * The {@code Release} represents any to be stored in the database, to cover
+ * Albums, EPs, and Singles.
  * 
+ * @param name
+ * @param artist
+ * @param releaseDate
+ * @param medium
+ * @param publisher
+ * @param id
+ * @param genres
+ * @param trackListings
  * @author Matthew McDermott
  */
 public interface Release {
@@ -24,6 +33,6 @@ public interface Release {
 	String id();
 
 	List<String> genres();
-	
+
 	List<List<Track>> trackListings();
 }

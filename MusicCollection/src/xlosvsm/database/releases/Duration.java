@@ -1,6 +1,7 @@
 package xlosvsm.database.releases;
 
 /**
+ * The {@code Duration}
  * @param minutes
  * @param seconds
  * @author Matthew McDermott
