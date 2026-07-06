@@ -1,4 +1,4 @@
-package xlosvsm.database.releases;
+package xlosvsm.database.releases.track;
 
 /**
  * The {@code Duration}
@@ -20,13 +20,7 @@ public record Duration(int minutes, int seconds) {
 	public static Duration of(int minutes, int seconds) {
 		return new Duration(minutes, seconds);
 	}
-
-	/**
-	 * 
-	 * @param durations
-	 * @return
-	 * @author Matthew McDermott
-	 */
+	
 	public static Duration sum(Duration... durations) {
 		int totalSeconds = 0;
 
