@@ -12,6 +12,6 @@ public record CD(int amount) implements Medium {
 	
 	@Override
 	public String toString() {
-		return "CD";
+		return (amount != 1 ? amount + " " : "") + "CD";
 	}
 }
