@@ -26,7 +26,7 @@ class ReleaseTests {
 	@Test
 	public void illegalAlbumTest1() {
 		assertThrows(IllegalArgumentException.class,
-				() -> new Album("Amnesiac", null, 2001, null, null, null, List.of(), List.of()));
+				() -> new Album("Amnesiac", "", 2001, null, null, null, List.of(), List.of()));
 	}
 
 	// toString test
@@ -40,11 +40,11 @@ class ReleaseTests {
 
 	@Test
 	public void albumToStringTest2() {
-		Album album = new Album("Nowhere", "Ride", LocalDate.of(2022, 11, 4), new Vinyl(12, 33, "Transparent Blue", 1),
+		Album album = new Album("Nowhere", "Ride", LocalDate.of(1990, 10, 15), new Vinyl(12, 33, "Transparent Blue", 1),
 				"Wichita", "WEBB572LP", List.of("Alternative Rock"), List.of());
 		String result = album.toString();
 
-		assertEquals("Album Name: Nowhere", result);
+		assertEquals("Nowhere by Ride (1990)", result);
 	}
 
 	// EP tests //
