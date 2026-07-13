@@ -9,13 +9,13 @@ public record Cassette(String colour, int amount) implements Medium {
 			throw new IllegalArgumentException("Amount must be greater than 0.");
 		}
 	}
-	
+
 	public Cassette(int amount) {
 		this("Black", amount);
 	}
-	
+
 	@Override
 	public String toString() {
-		return (amount != 1 ? amount + " " : "") + colour + " Cassette";
+		return String.format("%s%s Cassette", amount != 1 ? amount + " " : "", colour);
 	}
 }

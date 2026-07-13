@@ -33,9 +33,8 @@ public record Vinyl(int diameter, int RPM, String colour, int amount) implements
 		this(diametre, RPM, "Black", amount);
 	}
 
-
 	@Override
 	public String toString() {
-		return (amount != 1 ? amount + " " : "") + colour + " Vinyl (" + diameter + "\" @ " + RPM + "RPM)";
+		return String.format("%s%s Vinyl (%d\" @ %dRPM)", amount != 1 ? amount + " " : "", colour, diameter, RPM);
 	}
 }

@@ -10,6 +10,6 @@ public record Single(String name, String artist, LocalDate releaseDate, Medium m
 		List<String> genres, List<List<Track>> trackListings) implements Release {
 	@Override
 	public String toString() {
-		return name + "by" + artist + "(" + releaseDate.getYear() + ")";
+		return String.format("%s by %s (%d)", name, artist, releaseDate.getYear());
 	}
 }

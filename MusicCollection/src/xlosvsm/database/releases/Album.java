@@ -30,6 +30,6 @@ public record Album(String name, String artist, LocalDate releaseDate, Medium me
 
 	@Override
 	public String toString() {
-		return name + "by" + artist + "(" + releaseDate.getYear() + ")";
+		return String.format("%s by %s (%d)", name, artist, releaseDate.getYear());
 	}
 }
