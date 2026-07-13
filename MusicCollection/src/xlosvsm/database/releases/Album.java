@@ -20,6 +20,6 @@ public record Album(String name, String artist, LocalDate releaseDate, Medium me
 
 	@Override
 	public String toString() {
-		return "Album Name: " + name;
+		return name + "by" + artist + "(" + releaseDate.getYear() + ")";
 	}
 }
