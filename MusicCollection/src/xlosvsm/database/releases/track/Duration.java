@@ -37,6 +37,10 @@ public record Duration(int minutes, int seconds) {
 
 	@Override
 	public String toString() {
-		return minutes + ":" + seconds;
+		if (minutes >= 60) {
+			return String.format("%d:%02d:%02d", minutes / 60, minutes % 60, seconds);
+		}
+		
+		return String.format("%d:%02d", minutes, seconds);
 	}
 }
