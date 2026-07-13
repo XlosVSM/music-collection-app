@@ -9,4 +9,9 @@ public record CD(int amount) implements Medium {
 			throw new IllegalArgumentException("Amount must be greater than 0.");
 		}
 	}
+	
+	@Override
+	public String toString() {
+		return (amount != 1 ? amount + " " : "") + "CD";
+	}
 }

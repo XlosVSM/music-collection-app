@@ -12,15 +12,59 @@ class MediumTests {
 	// Cassette checks //
 	// Illegal argument tests
 	@Test
-	public void cassetteTest1() {
+	public void illegalCassetteTest() {
 		assertThrows(IllegalArgumentException.class, () -> new Cassette(0));
+	}
+
+	// toString test
+	@Test
+	public void cassetteToStringTest1() {
+		Cassette cassette = new Cassette(1);
+
+		assertEquals("Black Cassette", cassette.toString());
+	}
+	
+	@Test
+	public void cassetteToStringTest2() {
+		Cassette cassette = new Cassette(2);
+
+		assertEquals("2 Black Cassette", cassette.toString());
+	}
+	
+	@Test
+	public void cassetteToStringTest3() {
+		Cassette cassette = new Cassette("Transparent", 1);
+
+		assertEquals("Transparent Cassette", cassette.toString());
+	}
+	
+	@Test
+	public void cassetteToStringTest4() {
+		Cassette cassette = new Cassette("Transparent", 2);
+
+		assertEquals("2 Transparent Cassette", cassette.toString());
 	}
 
 	// CD checks //
 	// Illegal argument tests
 	@Test
-	public void cdTest1() {
+	public void illegalCDTest() {
 		assertThrows(IllegalArgumentException.class, () -> new CD(0));
+	}
+
+	// toString test
+	@Test
+	public void cdToStringTest1() {
+		CD cd = new CD(1);
+
+		assertEquals("CD", cd.toString());
+	}
+	
+	@Test
+	public void cdToStringTest2() {
+		CD cd = new CD(2);
+
+		assertEquals("2 CD", cd.toString());
 	}
 
 	// Vinyl checks //
@@ -45,7 +89,7 @@ class MediumTests {
 		assertThrows(IllegalArgumentException.class, () -> new Vinyl(0, 0, 0));
 	}
 
-	// toString() tests
+	// toString() tests	
 	@Test
 	public void vinylToStringTest1() {
 		Vinyl vinyl = new Vinyl(12, 33, 1);
