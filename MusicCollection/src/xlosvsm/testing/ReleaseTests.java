@@ -12,45 +12,34 @@ import xlosvsm.database.releases.Album;
 
 class ReleaseTests {
 	// Duration tests //
+	// Illegal argument tests
+
+	// toString test
 
 	// Track tests //
+	// Illegal argument tests
+
+	// toString test
 
 	// Album tests //
+	// Illegal argument tests
 	@Test
-	public void testAlbum1() {
-		Album album = new Album("Amnesiac", null, 2001, null, null, null, List.of(), List.of());
-		String result = album.toString();
-
-		assertEquals("Album Name: Amnesiac", result);
+	public void illegalAlbumTest1() {
+		assertThrows(IllegalArgumentException.class,
+				() -> new Album("Amnesiac", null, 2001, null, null, null, List.of(), List.of()));
 	}
 
+	// toString test
 	@Test
-	public void testAlbum2() {
+	public void albumToStringTest1() {
 		Album album = new Album("Amnesiac", "Radiohead", 2001, null, null, null, List.of(), List.of());
 		String result = album.toString();
 
-		assertEquals("Album Name: Amnesiac", result);
+		assertEquals("Amnesiac by Radiohead (2001)", result);
 	}
 
 	@Test
-	public void testAlbum3() {
-		Album album = new Album("Amnesiac", "Radiohead", null, null, null, null, "Alternative Rock", List.of());
-		String result = album.toString();
-
-		assertEquals("Album Name: Amnesiac", result);
-	}
-
-	@Test
-	public void testAlbum4() {
-		Album album = new Album("Amnesiac", "Radiohead", 2001, null, null, null, List.of("Alternative Rock"),
-				List.of());
-		String result = album.toString();
-
-		assertEquals("Album Name: Amnesiac", result);
-	}
-
-	@Test
-	public void testAlbum5() {
+	public void albumToStringTest2() {
 		Album album = new Album("Nowhere", "Ride", LocalDate.of(2022, 11, 4), new Vinyl(12, 33, "Transparent Blue", 1),
 				"Wichita", "WEBB572LP", List.of("Alternative Rock"), List.of());
 		String result = album.toString();
@@ -59,6 +48,12 @@ class ReleaseTests {
 	}
 
 	// EP tests //
+	// Illegal argument tests
+
+	// toString test
 
 	// Single tests //
+	// Illegal argument tests
+
+	// toString test
 }
